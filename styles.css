@@ -11,6 +11,7 @@ body {
   background-color: #fff6d9;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
@@ -133,6 +134,30 @@ input[type="checkbox"]:checked ~ i {
 
 input[type="checkbox"]:checked ~ span {
   color: rgba(55, 73, 56, 0.5);
+}
+
+/* Button */
+
+.save-container {
+    padding: 20px;
+    text-align: center;
+}
+
+#save-btn {
+    background-color: #FDE1AC;
+    color: #665235;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#save-btn:hover {
+    background-color: #fccb83;
 }
 
 /* Mobile responsive */
