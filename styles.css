@@ -1,62 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Nunito, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
-    background-color: #FFF6D9;
+  background-color: #fff6d9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    width: 80vmin;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 120px;
-    background-color: #A1BDA3;
-    border-radius: 12px;
-    overflow: hidden;
+  width: 90%;
+  max-width: 800px;
+  background-color: #a1bda3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  padding: 12px 12px 0;
 }
 
-h3 {
-    background-color: #98B29A;
-    text-align: center;
-    padding: 15px 0;
-    cursor: pointer;
-    font-weight: bold;
-    color: #2B332C;
+.tabs h3 {
+  background-color: #8ca68e;
+  color: #364037;
+  text-align: center;
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  transition: all 0.3s ease;
+  border: none;
 }
 
-.tab-content {
-    background-color: #A1BDA3;
-    padding: 50px 40px;
-}
-
-.tab-content p {
-    text-align: justify;
-    line-height: 1.9;
-    letter-spacing: 0.4px;
-    color: #364037;
-}
-
-.tab-content div {
-    display: none;
-}
-
-.tab-content .active {
-    display: block;
+.tabs h3:hover {
+  background-color: #94ac96;
 }
 
 .tabs .active {
-    background-color: #A1BDA3;
-    color: #364037;
+  background-color: #a1bda3;
+  color: #2B332C;
+  font-weight: 800;
+}
+
+.tab-content {
+  background-color: #a1bda3;
+  padding: 25px 20px;
+  border-radius: 0 0 8px 8px;
+}
+
+.tab-content div {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-content .active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .tabs {
+    grid-template-columns: 1fr;
+    padding: 8px 8px 0;
+  }
+
+  .tabs h3 {
+    border-radius: 8px;
+    margin-bottom: 4px;
+  }
+
+  .tabs .active {
+    border-radius: 8px 8px 0 0;
+  }
 }
