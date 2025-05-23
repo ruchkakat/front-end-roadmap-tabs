@@ -35,7 +35,7 @@ Hey there! 👋 Welcome to this **interactive front-end roadmap** designed to he
 ## 🌈 Design Highlights
 
 - **Soothing Color Palette**: Minty greens and warm yellows for a stress-free experience.
-- **Custom Checkboxes**: No boring default inputs here—just stylish animated checks.
+- **Custom Checkboxes**: No boring default inputs here - just stylish animated checks.
 - **Smooth Transitions**: Tabs fade in gracefully, and hover effects make navigation intuitive.
 
 ---
